@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: supply-chain-risk-predictor
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.app:app

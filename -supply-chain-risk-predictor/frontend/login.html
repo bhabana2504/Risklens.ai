@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - ChainSight AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0b0f19] flex items-center justify-center h-screen">
+
+<div class="bg-[#111827] p-8 rounded-2xl w-[350px] shadow-lg">
+  <h2 class="text-white text-2xl mb-6 text-center">ChainSight AI</h2>
+
+  <input id="user" placeholder="Username" class="w-full p-3 mb-4 bg-[#020617] text-white rounded-lg border border-gray-700">
+  <input id="pass" type="password" placeholder="Password" class="w-full p-3 mb-4 bg-[#020617] text-white rounded-lg border border-gray-700">
+
+  <button onclick="login()" class="w-full bg-indigo-600 p-3 rounded-lg text-white">
+    Sign In
+  </button>
+
+  <p id="err" class="text-red-400 text-sm mt-3 hidden">Invalid login</p>
+</div>
+
+<script>
+if(localStorage.getItem("auth")==="true"){
+  window.location.href="index.html"
+}
+
+function login(){
+  if(user.value==="admin" && pass.value==="1234"){
+    localStorage.setItem("auth","true")
+    window.location.href="index.html"
+  } else {
+    err.classList.remove("hidden")
+  }
+}
+</script>
+
+</body>
+</html>
