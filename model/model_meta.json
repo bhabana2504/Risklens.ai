@@ -1,0 +1,26 @@
+{
+  "accuracy": 0.744,
+  "cv_mean": 0.7372,
+  "cv_std": 0.0141,
+  "feature_cols": [
+    "supplier_reliability",
+    "demand_level",
+    "transport_delay",
+    "weather_impact",
+    "inventory_level"
+  ],
+  "feature_importances": {
+    "supplier_reliability": 0.1859,
+    "demand_level": 0.1977,
+    "transport_delay": 0.2777,
+    "weather_impact": 0.1794,
+    "inventory_level": 0.1593
+  },
+  "risk_labels": {
+    "0": "Low",
+    "1": "Medium",
+    "2": "High"
+  },
+  "n_train_samples": 4000,
+  "n_test_samples": 1000
+}
